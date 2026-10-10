@@ -24,6 +24,7 @@ runs:
       shell: bash
       run: bash "${{ github.action_path }}/dist/index.sh"
       env:
+        GITHUB_TOKEN: ${{ github.token }}
         INPUT_BUN_VERSION: ${{ inputs.bun-version }}
         INPUT_REGISTRY_URL: ${{ inputs.registry-url }}
         INPUT_SCOPE: ${{ inputs.scope }}
